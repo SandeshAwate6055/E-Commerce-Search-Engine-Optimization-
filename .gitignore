@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Raw dataset
+data/raw/
+
+# Product images
+data/images/
+
+# OS files
+.DS_Store
+Thumbs.db
