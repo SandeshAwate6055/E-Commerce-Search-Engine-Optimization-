@@ -1,0 +1,43 @@
+# Offline Indexing Pipeline Configuration
+# Adapted for: E-Commerce Multimodal Search Engine
+# Hardware: NVIDIA RTX 2050 (4 GB VRAM)
+
+models:
+  caption:
+    path: "Qwen/Qwen2-VL-2B-Instruct"
+    device: "cuda"
+
+  normalization:
+    path: "Qwen/Qwen2.5-0.5B-Instruct"
+    device: "cuda"
+
+  embedding:
+    path: "BAAI/bge-large-en-v1.5"
+    device: "cuda"
+    embedding_dim: 1024
+
+data:
+  products_csv: "data/processed/products_ml_ready.csv"
+  images_dir: "data/images"
+  supported_formats: [".jpg", ".jpeg", ".png"]
+  batch_size: 4
+
+database:
+  postgres:
+    host: "localhost"
+    port: 5432
+    dbname: "ecommerce_search"
+    user: "postgres"
+    password: "postgres"
+    table_name: "products"
+
+  faiss:
+    index_path: "data/processed/faiss/bge_index.faiss"
+    ids_path: "data/processed/faiss/bge_index_ids.npy"
+    index_type: "IndexFlatIP"
+    embedding_dim: 1024
+    normalize_vectors: true
+
+processing:
+  save_interval: 50
+  log_level: "INFO"

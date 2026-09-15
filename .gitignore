@@ -4,8 +4,19 @@ __pycache__/
 
 # Virtual environment
 .venv/
+.venv_gpu/
 venv/
 env/
+
+# Dependencies & Build
+node_modules/
+dist/
+
+# Logs & temp
+*.log
+backend/uploads/
+.vscode/
+demo/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -22,3 +33,15 @@ data/images/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Patent and Internal Documentation
+*.docx
+*.doc
+Patent*
+build_patent_doc.py
+plan.md
+plan_2.md
+research.md
+research_evaluation_report.md
+run_background.ps1
+run_background_indexing.bat
