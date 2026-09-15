@@ -148,8 +148,3 @@ npm run dev -- --host
 Frontend web application will be accessible at `http://localhost:5173`.
 
 ---
-
-## 👥 Authors & Acknowledgments
-
-* **Sandesh Awate** — Department of Computer Engineering, Vishwakarma Institute of Technology (VIT), Pune
-* Developed as an enterprise-grade multimodal information retrieval research system.
