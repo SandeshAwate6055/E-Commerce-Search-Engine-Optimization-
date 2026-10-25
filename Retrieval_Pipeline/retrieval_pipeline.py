@@ -19,7 +19,7 @@ import torch.nn.functional as F
 from PIL import Image
 
 from backend.config import settings
-import backend.services.model_loader as ml
+import Retrieval_Pipeline.models.model_loader as ml
 
 logger = logging.getLogger(__name__)
 
